@@ -1,0 +1,18 @@
+<div class="imgWrapper">
+
+    <div class="c-title">
+        {{ title }}
+    </div>
+    <div class="imgWrapper_img">
+        <img
+                [src]="imgUrl"
+                class="c-img-res"
+                (load) = 'imgLoadComplete($event)'
+                data-magnify="gallery"
+                [attr.data-src] = "imgUrl"
+        >
+        <nz-spin *ngIf = 'imgLoadCompleteMark'>
+        </nz-spin>
+    </div>
+
+</div>

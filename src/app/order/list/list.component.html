@@ -1,0 +1,108 @@
+<div class="c-content-wrap">
+    <div class="c-search-wrap">
+        <div class="c-search-group c-search-border">
+            <div class="c-search-itemLeft">
+                {{ "financeModule.list.classify" | translate}}:
+            </div>
+            <div class="c-search-itemRight">
+                <ul class="sectionList c-flex-row-start c-flex-auto-wrap">
+                    <li
+                        (click) = 'changeStatus("null")'
+                        [ngClass]='{"active-tag" : "null" == searchModel.status}'
+                    >
+                        {{ "financeModule.list.all" | translate}}
+                    </li>
+                    <li
+                        *ngFor = 'let item of statusEnum'
+                        (click) = 'changeStatus(item.value)'
+                        [ngClass]='{"active-tag" : item.value == searchModel.status}'>
+                        {{ item.name }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-search-group">
+            <!-- <nz-month-picker nzShowTime></<nz-month-picker> -->
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "financeModule.list.table.cashTime" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <nz-date-picker [nzPlaceHolder] = '" "' [(ngModel)]="searchModel.startTime"></nz-date-picker>
+                    <span style="color:#999"> ~ </span>
+                    <nz-date-picker [nzPlaceHolder] = '" "' [(ngModel)]="searchModel.endTime"></nz-date-picker>
+                </div>
+            </div>
+        </div>
+        <div class="c-search-group">
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "financeModule.list.table.orderNo" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input nz-input type="text" [(ngModel)] = 'searchModel.orderNo'>
+                </div>
+            </div>
+
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "financeModule.list.table.userName" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input nz-input type="text" [(ngModel)] ='searchModel.userName'>
+                </div>
+            </div>
+
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "financeModule.list.table.mobile" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input nz-input type="text" [(ngModel)] = 'searchModel.userPhoneNum'>
+                </div>
+            </div>
+
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "financeModule.list.table.idCard" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input nz-input type="text" [(ngModel)] = 'searchModel.userIdNo'>
+                </div>
+            </div>
+            <!-- <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "financeModule.list.table.holderName" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input nz-input type="text">
+                </div>
+            </div> -->
+        </div>
+      <div class="c-search-btnGroup">
+            <button nz-button nzType="primary"  (click) = 'getList() '>
+                {{ "common.search" | translate}}
+            </button>
+            <button style="margin-left: 20px;" nz-button (click) = 'reset() '>
+                {{ "common.reset" | translate}}
+            </button>
+      </div>
+    </div>
+
+    <c-table [tableData] = 'tableData'>
+    </c-table>
+    <div class="c-pag">
+        <nz-pagination [nzShowTotal]="totalTemplate" (nzPageIndexChange)='pageChange($event , "page")' (nzPageSizeChange) = 'pageChange($event , "size")' [nzPageIndex]="searchModel.currentPage"  [nzTotal]="totalSize" nzShowSizeChanger nzShowQuickJumper></nz-pagination>
+        <ng-template #totalTemplate let-total>
+            <span>
+                {{ "common.total" | translate }}
+            </span>
+            <span>
+                {{ totalSize }}
+            </span>
+            <span>
+                {{ "common.pageUnit" | translate }}
+            </span>
+        </ng-template>
+    </div>
+</div>

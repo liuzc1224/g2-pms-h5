@@ -1,0 +1,73 @@
+<div class="c-content-wrap">
+
+  <!-- 当日数据 -->
+  <div class="c-title">当日数据</div>
+  <div class="c-flex-row-around reportWrap mart">
+    <div class="reportWrapFlex">
+      <nz-table #borderedTable nzBordered [nzData]="languagePack['data1']" [nzShowPagination]="false">
+        <tbody *ngIf="todayData">
+          <tr *ngFor="let data of borderedTable.data">
+            <td>{{data.dec}}</td>
+            <td>{{todayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+    <div class="reportWrapFlex">
+      <nz-table #borderedTable2 nzBordered [nzData]="languagePack['data2']" [nzShowPagination]="false">
+        <tbody *ngIf="todayData">
+          <tr *ngFor="let data of borderedTable2.data">
+            <td>{{data.dec}}</td>
+            <td>{{todayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+  <!-- 日期搜索 -->
+  <div class="c-search-wrap">
+    <div class="c-search-group">
+      <!-- <nz-month-picker nzShowTime></<nz-month-picker> -->
+      <div class="c-search-item">
+        <div class="c-search-itemLeft">
+          {{ "financeModule.list.table.askTime" | translate}}:
+        </div>
+        <div class="c-search-itemRight">
+          <nz-month-picker [nzPlaceHolder]='" "' [nzFormat]="'MM/yyyy'" [(ngModel)]="searchModel.startTime"></nz-month-picker>
+          <span style="color:#999"> ~ </span>
+          <nz-month-picker [nzPlaceHolder]='" "' [nzFormat]="'MM/yyyy'" [(ngModel)]="searchModel.endTime"></nz-month-picker>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-search-btnGroup">
+      <button nz-button nzType="primary" (click)='search() '>
+        {{ "common.search" | translate}}
+      </button>
+      <button style="margin-left: 20px;" nz-button (click)='reset() '>
+        {{ "common.reset" | translate}}
+      </button>
+    </div>
+  </div>
+
+  <!-- 历史数据 -->
+  <div class="c-title">历史数据</div>
+  <c-table [tableData]='tableData'>
+  </c-table>
+  <div class="c-pag">
+    <nz-pagination [nzShowTotal]="totalTemplate" (nzPageIndexChange)='pageChange($event , "page")' (nzPageSizeChange)='pageChange($event , "size")'
+      [nzPageIndex]="searchModel.currentPage" [nzTotal]="totalSize" nzShowSizeChanger nzShowQuickJumper></nz-pagination>
+    <ng-template #totalTemplate let-total>
+      <span>
+        {{ "common.total" | translate }}
+      </span>
+      <span>
+        {{ totalSize }}
+      </span>
+      <span>
+        {{ "common.pageUnit" | translate }}
+      </span>
+    </ng-template>
+  </div>
+
+</div>

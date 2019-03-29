@@ -1,0 +1,40 @@
+<div class="c-content-wrap">
+  <div class="c-search-wrap">
+    <div class="c-search-group">
+      <!-- <nz-month-picker nzShowTime></<nz-month-picker> -->
+      <div class="c-search-item">
+        <div class="c-search-itemLeft">
+          {{ "financeModule.list.table.askTime" | translate}}:
+        </div>
+        <div class="c-search-itemRight">
+          <nz-date-picker [nzPlaceHolder]='" "' [(ngModel)]="searchModel.startDate"></nz-date-picker>
+          <span style="color:#999"> ~ </span>
+          <nz-date-picker [nzPlaceHolder] = '" "' [(ngModel)]="searchModel.endDate"></nz-date-picker>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-search-btnGroup">
+      <button nz-button nzType="primary" (click)='search() '>
+        {{ "common.search" | translate}}
+      </button>
+      <button style="margin-left: 20px;" nz-button (click)='reset() '>
+        {{ "common.reset" | translate}}
+      </button>
+    </div>
+  </div>
+  <!-- 历史数据 -->
+  <div class="c-title">新用户转化统计</div>
+  <div class="c-flex-row-around reportWrap mart">
+    <div class="reportWrapFlex" *ngIf="todayData">
+      <nz-table nzBordered [nzData]="languagePack.data1" [nzShowPagination]="false">
+        <tbody>
+          <tr *ngFor="let data of languagePack.data1">
+            <td>{{data.dec}}</td>
+            <td>{{todayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>

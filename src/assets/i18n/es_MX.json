@@ -1,0 +1,1643 @@
+{
+  "common": {
+    "unit": "pesos",
+    "workBench": "Plataforma de trabajo",
+    "tips": {
+      "operateFail": "Fracaso en operar",
+      "operateFailWithReason": "Fracaso en operar , Causa : ",
+      "operateSuccess": "Operar con éxito",
+      "fetchFail": "racaso en obtener datos",
+      "fetchFailReason": "Fracaso en obtener datos, Causa : ",
+      "timeNotify": "Hora de inicio no es mayour que hora de final",
+      "inputMark": "introducir obeservaciones ",
+      "notEmpty": "introducir información de cada parte",
+      "overflow": "monto no puede mayor que monto debido actual",
+      "moneyOverflow": "monto de verificación no puede mayor que monto de solicitar",
+      "minAuditMoney": "审批金额不可小于1000",
+      "invalidOper": "estado actual no puede operar este acto",
+      "diffTime": "Hora de llega no puede mayor que hora actual",
+      "orderNoNeed":"无效的订单号"
+    },
+    "companyName": "Sistema de administración",
+    "setting": "Configuración",
+    "logout": "Retirar",
+    "languageSetting": "Retirar",
+    "refresh": "Actualizar",
+    "search": "Buscar",
+    "reset": "Establecer",
+    "total": "Total",
+    "pageUnit": "Artículos",
+    "copy": "Copiar",
+    "operate": {
+      "name": "Operar",
+      "edit": "Editar",
+      "delete": "Borrar",
+      "save": "Guardar",
+      "sure": "Confirmar",
+      "close": "Cerrar",
+      "cancel": "Cancelar",
+      "add": "Añadir",
+      "deled": "Ha borrado",
+      "clickSee": "点击查看"
+    },
+    "btnGroup": {
+      "a": "Ver detalles",
+      "b": "Ver observaciones",
+      "c": "Notas de solicitud",
+      "d": "Notas de préstamo",
+      "e": "Retirar"
+    },
+    "validator": {
+      "notEmpty": "No puede dejar en blanco o el contenido es incorrecto"
+    },
+    "deleteToast": {
+      "title": "Confirmar",
+      "tip": "En caso de borrar, este dato no puede recuperar"
+    },
+    "orderStatus": [{
+      "desc": "Queda verificación",
+      "value": 1
+    }, {
+      "desc": "Aprobar verificación",
+      "value": 2
+    }, {
+      "desc": "Retirando/Llegando",
+      "value": 3
+    }, {
+      "desc": "Queda pagar",
+      "value": 4
+    }, {
+      "desc": "Acabado",
+      "value": 6
+    }, {
+      "desc": "Cerrar manual/Cancelar",
+      "value": 8
+    }, {
+      "desc": "Rechazar verificación",
+      "value": 9
+    }, {
+      "desc": "Cerrar sistema",
+      "value": 11
+    }, {
+      "desc": "Rechazar con máquina",
+      "value": 12
+    }, {
+      "desc": "Fracaso en llegar",
+      "value": 13
+    }]
+  },
+  "login": {
+    "username": "Usuario",
+    "password": "Contraseña",
+    "tips": {
+      "invalid": "nombre de usuario o contraseña es incorrecto",
+      "empty": "no puede dejar nombre de usuario o contraseña en blanco"
+    },
+    "login": "Iniciar sesión"
+  },
+  "homeType": [
+    {
+      "name": "自有住房",
+      "value": "1"
+    },
+    {
+      "name": "租房",
+      "value": "2"
+    },{
+      "name": "和家人生活",
+      "value": "3"
+    },
+    {
+      "name": "已抵押财产",
+      "value": "4"
+    }
+  ],
+  "systemModule": {
+    "admin": {
+      "table": {
+        "userName": "Nombre",
+        "realName": "Nombre real",
+        "password": "Contraseña",
+        "mobile": "Número de celular",
+        "department": "Deparmento",
+        "role": "Rol",
+        "remark": "Observaciones"
+      },
+      "add": "Añadir administrador",
+      "edit": "Editar administrador",
+      "choseRole": "Elegir rol",
+      "choseDepartment": "Elegir deparmento"
+    },
+    "role": {
+      "table": {
+        "roleName": "Nombre de rol",
+        "count": "Número de personas",
+        "remark": "Observaciones"
+      },
+      "add": "Añadir rol",
+      "edit": "Editar rol"
+    },
+    "depart": {
+      "add": "Añadir deparmento grande",
+      "makeNew": "Añadir deparmento",
+      "edit": "Editar deparmento",
+      "form": {
+        "name": "Nombre de deparmento",
+        "remark": "Observaciones"
+      }
+    }
+  },
+  "riskModule": {
+    "searchTabStatus": [{
+      "name": "Queda verificación",
+      "value": "1"
+    },
+      {
+        "name": "Aprobar",
+        "value": "2"
+      },
+      {
+        "name": "Rechazar",
+        "value": "9"
+      },
+      {
+        "name": "Rechazar con máquina",
+        "value": "12"
+      }
+    ],
+    "searchTabStatus1": [{
+      "name": "Queda verificación",
+      "value": [1]
+    },
+      {
+        "name": "Aprobar verificación",
+        "value": [2,3,4,6,13]
+      },
+      {
+        "name": "Rechazar",
+        "value": [9]
+      },
+      {
+        "name": "Rechazar con máquina",
+        "value": [12]
+      }
+    ]
+  },
+  "financeModule": {
+    "list": {
+      "table": {
+        "orderNo": "Número de pedido",
+        "serialNo":"流水号",
+        "createTime":"创建时间",
+        "serialCreateTime":"流水创建时间",
+        "tradeObject":"交易对象",
+        "repayType":"还款方式",
+        "payType": "放款方式",
+        "mobile": "Número de celular",
+        "loanAccount": "Cuenta de préstamo",
+        "holderName": "Nombre de titular de tarjeta",
+        "all": "Totalidad",
+        "cashTime": "Hora de retirar",
+        "cashAccount": "Cuenta de retirar",
+        "loanMount": "Monto de préstamo",
+        "moneyUnit": "Pesos",
+        "repayTime": "Hora de llegar",
+        "orderStatus": "Estado de pedido",
+        "backName": "Banco de nuestro parte",
+        "payCode": "Código de retirar",
+        "repayCode": "Código de pagar",
+        "askTime": "Fecha de solicitar",
+        "userName": "Nombre de usuario",
+        "idCard": "Número de CURP",
+        "auditMoney": "Monto de verificación",
+        "payMoney": " Monto de llegar",
+        "paymentResult": "Resultado de llegar",
+        "shouldRepay": "Monto debido",
+        "applyDate": "Fecha de préstamo",
+        "repayDate": "Fecha de pagar",
+        "realRepayMoney": "Monto de pagar",
+        "oper": "Operador",
+        "limit": "Plazo de préstamo",
+        "bankName": "Nombre de banco",
+        "loanPurpose": "uso de préstamo",
+        "exceptionLoan":"异常放款订单",
+        "exceptionRepay":"异常还款订单",
+        "exportExcel":"导出Excel",
+        "circulType":"流转类型",
+        "operationTime":"操作时间",
+        "amount":"交易金额",
+        "status":"交易状态",
+        "comment": "审核意见"
+      },
+      "status": [{
+        "name": "Queda llegar",
+        "value": "1"
+      }, {
+        "name": "Llegar con éxito",
+        "value": "2"
+      }, {
+        "name": "Fracaso en llegar",
+        "value": "3"
+      }, {
+        "name": "Queda pagar",
+        "value": "4"
+      },
+        {
+          "name":"在途",
+          "value":"5"
+        }
+      ],
+      "payType": [{
+        "name": "付款到银行账户",
+        "value": "bank_account"
+      },
+        {
+          "name": "在线支付",
+          "value": "card"
+        },
+        {
+          "name": "实体商店还款",
+          "value": "store"
+        }
+      ],
+      "repayType": [{
+        "name": "Transferencia electrónica",
+        "value": "1"
+      }],
+      "reaymentResult": [{
+        "name": "Con éxito",
+        "value": true
+      }, {
+        "name": "Fracaso ",
+        "value": false
+      }],
+      "totalLoan": "Actual",
+      "classify": "Tipo",
+      "all": "Total",
+      "makeLoan": "LLegar a cuenta",
+      "model": {
+        "title": "Confirmar llegar con éxito",
+        "choseStatus": "Elegir estado",
+        "choseRepayMethod": "Elegir modo de arreglar",
+        "inputBankname": "Introducir banco",
+        "inputAccount": "Introducir cuenta de nuestro parte",
+        "inputBillNo": "Introducir código de cuenta corriente",
+        "inputRemark": "Introducir observaciones",
+        "inputPayCode": "Introducir código de retirar",
+        "inputRepayCode": "Introducir código de pagar",
+        "inputPayDate": "Introducir hora de llegar",
+        "inputPayMoney": "Introducir monto de préstamo",
+        "status": "Estado de trato",
+        "bankName": "Banco de nuestro parte",
+        "account": "Cuenta de nuestro parte",
+        "billNo": "Código de cuenta corriente",
+        "remark": "Observaciones",
+        "repayType": "Modo de llegar",
+        "choseType": "Elegir modo de llegar",
+        "payCode": "Código de retirar",
+        "repayCode": "Código de pagar",
+        "payDate": "Hora de llegar",
+        "payMoney": "Monto de préstamo",
+        "resuseRes": "Causa de rechazar",
+        "reteatRes": "Causa de retirar"
+      }
+    },
+    "repayList": {
+      "status": [{
+        "name": "Queda pagar",
+        "value": "1"
+      }, {
+        "name": "Ha pagado, pero no está arreglado",
+        "value": "3"
+      }, {
+        "name": "Ha pagado, y está arreglado",
+        "value": "4"
+      }, {
+        "name": "Ha vencido, no está arreglado",
+        "value": "5"
+      }, {
+        "name": "Ha vencido, y está arreglado",
+        "value": "6"
+      }],
+      "table": {
+        "repayCode": "Código de pagar",
+        "payCode": "Código de llegar",
+        "mobile": "Número de celular",
+        "loanMount": "Monto de préstamo",
+        "moneyUnit": "Pesos",
+        "limit": "Plazo de préstamo",
+        "limitUnit": "Días",
+        "repayDate": "Fecha de pagar",
+        "repayShuold": "Monto debido de pagar ",
+        "repayTotal": "Monto de pagar",
+        "status": "Estado de trato",
+        "remark": "Observaciones",
+        "repayType": "Modo de pagar",
+        "userName": "Nombre de prestamista",
+        "repayMethod": "Modo de arreglar",
+        "realRepayMoney": "El importe de reembolso actual",
+        "overDueFine": "Monto de retrasado",
+        "orderNo":"订单编号",
+        "dueDay":"逾期天数"
+      },
+      "oper": {
+        "operate":"操作",
+        "hasClear": "Arreglado",
+        "noClear": "Pagar una parte",
+        "makeClear": "Arreglar",
+        "revokeFlowing":"撤销流水"
+      },
+      "tips": {
+        "title": "Confirmar arreglado",
+        "desc": "En caso de confirmar, este dato no puede cambiar",
+        "changeMoney": "Cambiar monto de pagar",
+        "inputReayTotal": "Introducir monto de pagar"
+      },
+      "repayType": [{
+        "name": "Transferencia electrónica",
+        "value": "1"
+      }]
+    },
+    "detail": {
+      "operator": "Operador",
+      "detail": "Detalles de préstamo",
+      "loanMount": "Monto de préstamo",
+      "repayShould": "Monto debido",
+      "orderNo": "Número de pedido",
+      "loanAccount": "Cuenta de préstamo",
+      "loanDate": "Fecha de préstamo",
+      "repayDate": "Fecha de pagar",
+      "repayCode": "Código de pagar",
+      "repayMount": "Monto de pagar",
+      "orderStatus": "Estado de pedido"
+    }
+  },
+  "usrModule": {
+    "list": {
+      "table": {
+        "userId": "ID de usuario",
+        "mobile": "Número de celular",
+        "realName": "Nombre",
+        "idCard": "Número de CURP",
+        "registeDate": "Fecha de registro"
+      }
+    }
+  },
+  "orderModule": {
+    "order": {
+      "basicInfo": {
+        "title": "Información básica",
+        "registerDate": "Fecha de registro",
+        "mobile": "Número de celular",
+        "sex": "Sexo",
+        "email": "E-mail",
+        "marray": "Estado Civil",
+        "degree": "Educación",
+        "loanInfo": "Detalles de pedido",
+        "actInfo": "Tiempo de espera",
+        "step": "Proceso",
+        "uinit": "Número",
+        "step_unit": "Pasos",
+        "stay": "Tiempo de espara(miliminutos))",
+        "stayTrans": "Tiempo de transferir(minutos)",
+        "userId": "Número de usuario",
+        "loginInfo": "Última hora de inicio"
+      },
+      "approveInfo": {
+        "title": "Información de cuenta",
+        "overDueTotal": "Monto total vencido",
+        "borrowTotal": "Monto total de préstamo",
+        "unReturnTotal": "Monto total debido",
+        "checkUp": "Ver",
+        "auth": "Información de certificación",
+        "borrowCount": "frecuencia de préstamo",
+        "overDueCount": "frecuencia de vencimiento"
+      },
+      "auth": {
+        "photo": {
+          "title": "Información de fotos",
+          "front": "El positivo de CURP",
+          "back": "El negativo de CURP",
+          "hand": "Persona con CURP",
+          "income": "Certificación de salarios",
+          "imageEnv": "最佳全景照",
+          "residentialProof": "住址证明"
+        }
+      }
+    },
+    "record": {
+      "headerInfo": ["Número de pedido", "Monto de préstamo(pesos)", "Plazo de préstamo(días)", "Si es vencido", "Estado de trato", "operar"],
+      "askHeaderInfo": ["Número de pedido", "Fecha de solicitar", "Monto de solicitar(pesos)", "Plazo de solicitar(días)", "Estado de solicitar"],
+      "detStatus": ["Sí", "No"]
+    },
+    "auth": {
+      "locDataSet": [{
+        "name": "Última hora de inicio",
+        "reflect": "createTime",
+        "pip": "dataFormat"
+      }, {
+        "name": "longitud",
+        "reflect": "longitude",
+        "pip": "nullPipe"
+      },
+        {
+          "name": "latitud",
+          "reflect": "latitude",
+          "pip": "nullPipe"
+        }, {
+          "name": "Dirección de IP",
+          "reflect": "ipAddress",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "最近登录城市",
+          "reflect": "deviceId",
+          "pip": "nullPipe"
+        }, {
+          "name": "Equipo de inicio",
+          "reflect": "deviceId",
+          "pip": "nullPipe"
+        }
+      ],
+      "orderInfo": [
+        {
+          "name": "申请金额(比索)",
+          "reflect": "applyMoney"
+        },
+        {
+          "name": "申请期限(天)",
+          "reflect": "loanDays"
+        },
+        {
+          "name": "借款用途",
+          "reflect": "borrowPurpose"
+        },
+        {
+          "name": "历史借款成功次数",
+          "reflect": "successLoanNum"
+        },
+        {
+          "name": "历史正常还款",
+          "reflect": "normalRepaymentNum"
+        }
+      ],
+      "zxOner": [
+        {
+          "name": "姓名",
+          "reflect": "username",
+          "zxReflect": "circuloUsername"
+        },
+        {
+          "name": "RFC",
+          "reflect": "username",
+          "zxReflect": "circuloRfc"
+        },
+        {
+          "name": "CURP",
+          "reflect": "idNumber",
+          "zxReflect": "circuloCurp"
+        },
+        {
+          "name": "性别",
+          "reflect": "gender",
+          "zxReflect": "circuloGender"
+        },
+        {
+          "name": "出生日期",
+          "reflect": "birthday",
+          "zxReflect": "circuloBirthday"
+        }
+      ],
+      "baseInfo": [
+        {
+          "name": "手机号码",
+          "reflect": "phoneNumber",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "学历",
+          "reflect": "educationBackground",
+          "pip": "EduPipe"
+        },
+        {
+          "name": "出生地",
+          "reflect": "birthplace",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "婚姻状况",
+          "reflect": "maritalStatus",
+          "pip": "MarryPipe"
+        },
+        {
+          "name": "email",
+          "reflect": "email",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "CURP正面照",
+          "reflect": "0",
+          "pip": "img"
+        },
+        {
+          "name": "CURP反面照",
+          "reflect": "1",
+          "pip": "img"
+        }
+      ],
+      "baseInfoface": [
+        {
+          "name": "最佳全景照",
+          "reflect": "2",
+          "pip": "img"
+        },
+        {
+          "name": "人脸识别相似度",
+          "reflect": "resultRef1Confidence",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "千分误识度",
+          "reflect": "resultRef11e3",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "万分误识度",
+          "reflect": "resultRef11e4",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "十万误识度",
+          "reflect": "resultRef11e5",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "百万误识度",
+          "reflect": "resultRef11e6",
+          "pip": "nullPipe"
+        }
+      ],
+      "familyInfo": [
+        {
+          "name": "Nombre de padre",
+          "reflect": "fatherName",
+          "pip": "nullPipe"
+        }, {
+          "name": "Nombre de madre",
+          "reflect": "motherName",
+          "pip": "nullPipe"
+        }, {
+          "name": "家庭成员数",
+          "reflect": "familyMembersCount",
+          "pip": "nullPipe"
+        }, {
+          "name": "Dirección de familia",
+          "reflect": "homeAddress",
+          "pip": "homeAddress"
+        }, {
+          "name": "Teléfono de familia",
+          "reflect": "homeTelephone",
+          "pip": "nullPipe"
+        },{
+          "name": "住宅类型",
+          "reflect": "addressType",
+          "pip": "homeTypePipe"
+        },{
+          "name": "收入证明",
+          "reflect": "3",
+          "pip": "img"
+        }
+      ],
+      "workInfo": [
+        {
+          "name": "Fuente de saldo",
+          "reflect": "incomeSource",
+          "pip": "workFromPipe"
+        }, {
+          "name": "Nombre de compañía",
+          "reflect": "company",
+          "pip": "nullPipe"
+        }, {
+          "name": "Dirección de compañía",
+          "reflect": "companyAddress",
+          "pip": "nullPipe"
+        }, {
+          "name": "Cargo",
+          "reflect": "position",
+          "pip": "nullPipe"
+        },
+        {
+          "name": "住址证明",
+          "reflect": "4",
+          "pip": "img"
+        }
+      ],
+      "circuloInfo": [
+        {
+          "name": "还款情况",
+          "reflect": "",
+          "pip": "nullPipe"
+        },{
+          "name": "ProductoResponsabilidad",
+          "reflect": "tipoResponsabilidad",
+          "pip": "nullPipe"
+        },{
+          "name": "Credito",
+          "reflect": "tipoCredito",
+          "pip": "nullPipe"
+        },{
+          "name": "Otorgante",
+          "reflect": "nombreOtorgante",
+          "pip": "nullPipe"
+        },{
+          "name": "Plazo",
+          "reflect": "numeroPagos",
+          "pip": "nullPipe"
+        },{
+          "name": "Límite",
+          "reflect": "limiteCredito",
+          "pip": "nullPipe"
+        },{
+          "name": "Aprobado",
+          "reflect": "creditoMaximo",
+          "pip": "nullPipe"
+        },{
+          "name": "Actual",
+          "reflect": "pagoActual",
+          "pip": "nullPipe"
+        },{
+          "name": "Vencido",
+          "reflect": "saldoVencido",
+          "pip": "nullPipe"
+        },{
+          "name": "a Pagar",
+          "reflect": "montoPagar",
+          "pip": "nullPipe"
+        },{
+          "name": "reporte",
+          "reflect": "fechaReporte",
+          "pip": "nullPipe"
+        },{
+          "name": "Apertura",
+          "reflect": "fechaAperturaCuenta",
+          "pip": "nullPipe"
+        },{
+          "name": "Cierre",
+          "reflect": "fechaCierreCuenta",
+          "pip": "nullPipe"
+        },{
+          "name": "pago",
+          "reflect": "fechaUltimoPago",
+          "pip": "nullPipe"
+        },{
+          "name": "Atraso",
+          "reflect": "overDue",
+          "pip": "nullPipe"
+        }
+      ],
+      "DomicilioVO": [
+        {
+          "name": "calle numero",
+          "reflect": "direccion",
+          "pip": "nullPipe"
+        },{
+          "name": "Colonia",
+          "reflect": "coloniaPoblacion",
+          "pip": "nullPipe"
+        },{
+          "name": "del/Mpio",
+          "reflect": "delegacionMunicipio",
+          "pip": "nullPipe"
+        },{
+          "name": "Cludad",
+          "reflect": "ciudad",
+          "pip": "nullPipe"
+        },{
+          "name": "Estado",
+          "reflect": "estado",
+          "pip": "nullPipe"
+        },{
+          "name": "cp",
+          "reflect": "cp",
+          "pip": "nullPipe"
+        },{
+          "name": "telephone",
+          "reflect": "numeroTelefono",
+          "pip": "nullPipe"
+        },{
+          "name": "Fecha de registro",
+          "reflect": "fechaRegistroDomicilioDateStr",
+          "pip": "nullPipe"
+        }
+      ],
+      "consultasEfectuadaVOList": [
+        {
+          "name": "fecha de consulta",
+          "reflect": "fechaConsultaDateStr",
+          "pip": "nullPipe"
+        },{
+          "name": "Otorgante",
+          "reflect": "nombreOtorgante",
+          "pip": "nullPipe"
+        },{
+          "name": "Tipo de Credito",
+          "reflect": "tipoCredito",
+          "pip": "nullPipe"
+        },{
+          "name": "Monto",
+          "reflect": "importeCredito",
+          "pip": "nullPipe"
+        },{
+          "name": "Moneda",
+          "reflect": "claveUnidadMonetaria",
+          "pip": "nullPipe"
+        }
+      ],
+      "friendInfo": {
+        "friend0": "Contratos",
+        "friend": "Contrato de emergencia",
+        "friend2": "Contrato de emergencia 2",
+        "friend3": "Contrato de emergencia 3",
+        "call0": "Importar/No importar",
+        "call": "Teléfono de emergencia",
+        "call2": "Teléfono de emergencia 2",
+        "call3": "Teléfono de emergencia 3"
+      },
+      "setAccount": [{
+        "name": "Contrato de emergencia 3",
+        "reflect": "gender",
+        "pip": "nullPipe"
+      }, {
+        "name": "Teléfono de emergencia 3",
+        "reflect": "gender",
+        "pip": "nullPipe"
+      }, {
+        "name": "Número de tarjeta",
+        "reflect": "gender",
+        "pip": "nullPipe"
+      }]
+    }
+  },
+  "enums": {
+    "degree": [{
+      "name": "Primaria",
+      "value": "2"
+    }, {
+      "name": "Secundaria",
+      "value": "3"
+    }, {
+      "name": "Técnica",
+      "value": "4"
+    }, {
+      "name": "Preparatorio",
+      "value": "5"
+    }, {
+      "name": "Licenciatura",
+      "value": "6"
+    }, {
+      "name": "Posgrado",
+      "value": "7"
+    }],
+    "sex": [{
+      "name": "Masculino",
+      "value": "1"
+    }, {
+      "name": "Femenino",
+      "value": "0"
+    }],
+    "marray": [{
+      "name": "Soltero(a)",
+      "value": "1"
+    }, {
+      "name": "Casado(a)",
+      "value": "2"
+    }, {
+      "name": "Divorciado(a)",
+      "value": "3"
+    }, {
+      "name": "Separado(a)",
+      "value": "4"
+    }, {
+      "name": "Viudo(a)",
+      "value": "5"
+    }],
+    "incomeSource": [{
+      "name": "sin trabajo/ pensión",
+      "value": "1"
+    }, {
+      "name": "sin trabajo pero tiene pensión",
+      "value": "2"
+    }, {
+      "name": "trabajar a tiempo completo",
+      "value": "3"
+    }, {
+      "name": "trabajar a tiempo parcial",
+      "value": "4"
+    }, {
+      "name": "negocio propio",
+      "value": "5"
+    }, {
+      "name": "otro",
+      "value": "6"
+    }]
+  },
+  "orderList": {
+    "allList": {
+      "status": [{
+        "name": "Queda verificación",
+        "value": "1"
+      }, {
+        "name": "Aprobar verificación",
+        "value": "2"
+      }, {
+        "name": "Retirar/Llegando",
+        "value": "3"
+      }, {
+        "name": "Queda pagar",
+        "value": "4"
+      }, {
+        "name": "Retrasando",
+        "value": "5"
+      }, {
+        "name": "Acabado",
+        "value": "6"
+      }, {
+        "name": "Pagar una parte",
+        "value": "7"
+      }, {
+        "name": "Cerrar manual/Cancelar",
+        "value": "8"
+      }, {
+        "name": "Ha vencido, pero está arreglado",
+        "value": "10"
+      }, {
+        "name": "Rechazar",
+        "value": "9"
+      }, {
+        "name": "Cerrar este sistema",
+        "value": "11"
+      }, {
+        "name": "Rechazar con máquina",
+        "value": "12"
+      }, {
+        "name": "Fracaso en llegar",
+        "value": "13"
+      }],
+      "table": {
+        "applyMoney": "Monto de solicitar",
+        "applyMonth": "Plazo de solicitar",
+        "appreciationMoney": "Monto de IVA",
+        "appreciationRate": "Tasa de IVA",
+        "createTime": "Fecha de crear",
+        "currentRealRepay": "Monto debido actual",
+        "lendRate": "Tasa de préstamo",
+        "lendRateMoney": "Interés de préstamo",
+        "loanDays": "Día de préstamo",
+        "modifyTime": "Fecha de modificar",
+        "orderNo": "Número de pedido",
+        "overDueRate": "Tasa de vencido",
+        "overDueRateMoney": "Monto de retrasado",
+        "payDate": "Hora de llegar",
+        "productId": "Código de productos",
+        "status": "Estado de pedido",
+        "statusDesc": "Descripción de estado de pedido",
+        "userId": "Número de usuario",
+        "userIdNo": "Número de CURP de usuario",
+        "userName": "Nombre",
+        "userPhone": "Número de celular de usuario",
+        "totalPeriod": "Plazo total",
+        "dueDay": "Día vencido",
+        "realRepayMoney": "Monto vencido",
+        "currentPeriod": "Plazo actual",
+        "currentRepay": "Monto debido actual",
+        "planRepaymentDate": "Fecha de pagar de plan",
+        "realRepaymentDate": "Fecha de pagar actual",
+        "hasRepay": "Monto debido actual"
+      },
+      "opera": {
+        "pass": "Pedido de verificación",
+        "operate": "Operar",
+        "auditAmount": "Monto de verificación",
+        "comment": "Opinión de verificación",
+        "retreat": "Retirar pedido",
+        "refuse": "Rechazar"
+      },
+      "enum": {
+        "risk": [{
+          "name": "Aprobar",
+          "value": "2"
+        }, {
+          "name": "Rechazar",
+          "value": "9"
+        }, {
+          "name": "Retirar",
+          "value": "1"
+        }],
+        "refuse": [{
+          "name": "Información de foto cargada no está clara",
+          "value": "1"
+        }, {
+          "name": "La foto de prestamista en documentos no coincide con la foto de persona con CURP",
+          "value": "2"
+        }, {
+          "name": "La foto de persona con CURP no coincide con cargo",
+          "value": "3"
+        }, {
+          "name": "Información de IFE/INE no coincide con la información cargada por prestamista",
+          "value": "4"
+        }, {
+          "name": "La foto de persona con CURP, el positivo de CURP, el negativo de CURP no cumplen con los requisitos",
+          "value": "5"
+        }, {
+          "name": "Certificación de ingresos no coincide con información de trabajo",
+          "value": "5"
+        }, {
+          "name": "Otros(escribir causas)",
+          "value": "6"
+        }],
+        "retreat": [{
+          "name": "Información de foto cargada no está clara",
+          "value": "1"
+        },
+          {
+            "name": "La foto de prestamista en documentos no coincide con la foto de persona con CURP",
+            "value": "2"
+          },
+          {
+            "name": "La foto de persona con CURP no coincide con cargo",
+            "value": "3"
+          },
+          {
+            "name": "Información de IFE/INE no coincide con la información cargada por prestamista",
+            "value": "4"
+          },
+          {
+            "name": "La foto de persona con CURP, el positivo de CURP, el negativo de CURP no cumplen con los requisitos",
+            "value": "5"
+          },
+          {
+            "name": "Certificación de ingresos no coincide con información de trabajo",
+            "value": "6"
+          },
+          {
+            "name": "Otros(escribir causas)",
+            "value": "7"
+          }
+        ]
+      }
+    }
+  },
+  "orderDetail": {
+    "bankInfo": {
+      "accountId": "ID de cuenta",
+      "bankCardNum": "Número de tarjeta de crédito",
+      "bankId": "ID de banco",
+      "createTime": "Fecha de crear",
+      "idCardNum": "Número de CURP",
+      "modifyTime": "Fecha de modificar",
+      "status": "Estado",
+      "userName": "Nombre",
+      "bankName": "Nombre de banco"
+    }
+  },
+  "bankModule": {
+    "list": {
+      "bankName": "Nombre de banco",
+      "bankCode": "Código de banco",
+      "singleLimit": "Límete de una vez",
+      "dailyLimit": "Límete del día",
+      "icon": "Logo"
+    }
+  },
+  "default": {
+    "history": "Datos históricos",
+    "today": "Datos del día",
+    "seven": "Datos de últimos 7 días",
+    "cols": {
+      "his": {
+        "artificialAuditPassCount": "Número aprobado por verificación manual",
+        "auditPassCount": "Número total aprobado por verificación",
+        "borrowUserCount": "Número de solicitud de préstamo",
+        "dataOfDay": "Fecha de datos",
+        "dueAmount": "Monto total vencido",
+        "payAmount": "Monto total llegado",
+        "planRepayAmount": "Monto total debido",
+        "registerUserCount": "Número de usuarios de registro",
+        "repayAmount": "Monto total pagado",
+        "systemAuditPassCount": "Número aprobado por sistema",
+        "unRepayAmount": "Monto total por pagar",
+        "withdrawDepositAmount": "Monto total de retirar",
+        "withdrawDepositCount": "Número de retirar",
+        "auditTotalAmount": "Monto total aprobado por verificación."
+      },
+      "today": {
+        "artificialAuditPassCount": "Número aprobado por verificación manual",
+        "auditPassCount": "Número total aprobado por verificación",
+        "borrowUserCount": "Número de solicitud de préstamo",
+        "payAmount": "Monto total llegado",
+        "registerUserCount": "Número de usuarios de registro",
+        "systemAuditPassCount": "Número aprobado por sistema"
+      }
+    }
+  },
+  "reportModule": {
+    "channeldata":{
+      "channelType":[
+        {
+          "name": "Canal estadística-código de invitación",
+          "value": 1
+        },{
+          "name": "Canal estadística-H5",
+          "value": 2
+        }
+      ],
+      "startDate":"Fecha empezada",
+      "endDate":"Fecha terminada",
+      "table":{
+        "id":"Canal ID",
+        "name":"Proveedor de canal",
+        "channelName":"Nombre de canal",
+        "channelBranchName":"Nombre de canal sucursal",
+        "invitationCode":"Código de invitación",
+        "download":"Número de descarga",
+        "registered":"Número registrado",
+        "link":"Enlace de canal",
+        "firstLoanApplication":"Número de solicitantes de primer préstamo",
+        "firstLoanReviewPassed":"Número de personas aprobadas de primer préstamo",
+        "firstLoanWithdrawal":"Número de retiro de primer préstamo",
+        "completeTheFirstLoan":"Número de primer préstamo completado",
+        "completeTheSecondLoan":"Número de segundo préstamo completado",
+        "completeMultiLoan":"Número de multipréstamo",
+        "successfulRepayment":"Número de pago exitoso",
+        "firstLoanOverdue":"Número vencido del primerpréstamo",
+        "M1IsOverdue":"M1Número de pedidos vencidos",
+        "M2IsOverdue":"M2Número de pedidos vencidos",
+        "M3IsOverdue":"M3Número de pedidos vencidos"
+      }
+    },
+    "saleTodayData": {
+      "table1": [{
+        "dec": "下载用户数:",
+        "reflect": "downloadUserCount"
+      },
+        {
+          "dec": "注册用户数:",
+          "reflect": "registerUserCount"
+        },
+        {
+          "dec": "申请用户数:",
+          "reflect": "applyUserCount"
+        },
+        {
+          "dec": "机审通过订单数:",
+          "reflect": "machineTrialPassOrderCount"
+        },
+        {
+          "dec": "人工审核通过订单数:",
+          "reflect": "manualPassOrderCount"
+        },
+        {
+          "dec": "系统直放订单数:",
+          "reflect": "systemPassOrderCount"
+        },
+        {
+          "dec": "审核通过订单数:",
+          "reflect": "auditPassOrderCount"
+        },
+        {
+          "dec": "审核通过总额:",
+          "reflect": "auditPassOrderAmount"
+        },
+        {
+          "dec": "提现订单数:",
+          "reflect": "withdrawDepositOrderCount"
+        },
+        {
+          "dec": "提现总额:",
+          "reflect": "withdrawDepositOrderAmount"
+        },
+        {
+          "dec": "放款订单数:",
+          "reflect": "paymentOrderCount"
+        },
+        {
+          "dec": "放款总额:",
+          "reflect": "paymentOrderAmount"
+        },
+        {
+          "dec": "还款总额:",
+          "reflect": "repaymentOrderAmount"
+        }
+      ],
+      "table2": [{
+        "dec": "新用户申请用户数:",
+        "reflect": "newUserApplyUserCount"
+      },
+        {
+          "dec": "新用户机审通过订单数:",
+          "reflect": "newUserMachineTrialPassOrderCount"
+        },
+        {
+          "dec": "新用户人工审核通过订单数:",
+          "reflect": "newUserManualPassOrderCount"
+        },
+        {
+          "dec": "新用户系统直放订单数:",
+          "reflect": "newUserSystemPassOrderCount"
+        },
+        {
+          "dec": "新用户审核通过订单数:",
+          "reflect": "newUserAuditPassOrderCount"
+        },
+        {
+          "dec": "新用户审核通过总额:",
+          "reflect": "newUserAuditPassOrderAmount"
+        },
+        {
+          "dec": "新用户提现订单数:",
+          "reflect": "newUserWithdrawDepositOrderCount"
+        },
+        {
+          "dec": "新用户提现总额:",
+          "reflect": "newUserWithdrawDepositOrderAmount"
+        }
+      ],
+      "table3": [{
+        "dec": "老用户申请用户数:",
+        "reflect": "oldUserApplyUserCount"
+      },
+        {
+          "dec": "老用户机审通过订单数:",
+          "reflect": "oldUserMachineTrialPassOrderCount"
+        },
+        {
+          "dec": "老用户人工审核通过订单数:",
+          "reflect": "oldUserManualPassOrderCount"
+        },
+        {
+          "dec": "老用户系统直放订单数:",
+          "reflect": "oldUserSystemPassOrderCount"
+        },
+        {
+          "dec": "老用户审核通过订单数:",
+          "reflect": "oldUserAuditPassOrderCount"
+        },
+        {
+          "dec": "老用户审核通过总额:",
+          "reflect": "oldUserAuditPassOrderAmount"
+        },
+        {
+          "dec": "老用户提现订单数:",
+          "reflect": "oldUserWithdrawDepositOrderCount"
+        },
+        {
+          "dec": "老用户提现总额:",
+          "reflect": "oldUserWithdrawDepositOrderAmount"
+        }
+      ],
+      "table4": [{
+        "dec": "下载用户数:",
+        "reflect": "downloadUserCount"
+      },
+        {
+          "dec": "注册用户数:",
+          "reflect": "registerUserCount"
+        },
+        {
+          "dec": "申请订单数:",
+          "reflect": "applyUserCount"
+        },
+        {
+          "dec": "机审通过订单数:",
+          "reflect": "machineTrialPassOrderCount"
+        },
+        {
+          "dec": "人工审核通过订单数:",
+          "reflect": "manualPassOrderCount"
+        },
+        {
+          "dec": "系统直放订单数:",
+          "reflect": "systemPassOrderCount"
+        },
+        {
+          "dec": "审核通过订单数:",
+          "reflect": "auditPassOrderCount"
+        },
+        {
+          "dec": "审核通过总额:",
+          "reflect": "auditPassOrderAmount"
+        },
+        {
+          "dec": "提现订单数:",
+          "reflect": "withdrawDepositOrderCount"
+        },
+        {
+          "dec": "提现总额:",
+          "reflect": "withdrawDepositOrderAmount"
+        },
+        {
+          "dec": "放款订单数:",
+          "reflect": "paymentOrderCount"
+        },
+        {
+          "dec": "放款总额:",
+          "reflect": "paymentOrderAmount"
+        },
+        {
+          "dec": "应还总额:",
+          "reflect": "planRepayAmount"
+        },
+        {
+          "dec": "已还款总额:",
+          "reflect": "repaymentOrderAmount"
+        },
+        {
+          "dec": "待还款总额:",
+          "reflect": "unRepaymentAmount"
+        },
+        {
+          "dec": "逾期总额:",
+          "reflect": "overdueAmount"
+        }
+      ]
+    },
+    "usrfunnelData": {
+      "table": [
+        {
+          "dec": "下载用户数:",
+          "reflect": "downloadUserCount"
+        },
+        {
+          "dec": "软件启动数:",
+          "reflect": "softwareStartCount"
+        },
+        {
+          "dec": "注册用户数:",
+          "reflect": "registerUserCount"
+        },
+        {
+          "dec": "登录用户数:",
+          "reflect": "loginUserCount"
+        },
+        {
+          "dec": "点击申请次数:",
+          "reflect": "clickApplyCount"
+        },
+        {
+          "dec": "完成借款用途次数:",
+          "reflect": "borrowPurposeCount"
+        },
+        {
+          "dec": "完成实名认证次数:",
+          "reflect": "nameAuthCount"
+        },
+        {
+          "dec": "完成个人信息次数:",
+          "reflect": "userInfoCount"
+        },
+        {
+          "dec": "完成家庭信息次数:",
+          "reflect": "familyInfoCount"
+        },
+        {
+          "dec": "完成工作信息次数:",
+          "reflect": "workInfoCount"
+        },
+        {
+          "dec": "完成联系人信息次数:",
+          "reflect": "contactInfoCount"
+        },
+        {
+          "dec": "机审通过订单数:",
+          "reflect": "machineTrialPassOrderCount"
+        },
+        {
+          "dec": "人工审核通过订单数:",
+          "reflect": "manualPassOrderCount"
+        },
+        {
+          "dec": "系统直放订单数:",
+          "reflect": "systemPassOrderCount"
+        },
+        {
+          "dec": "审核通过订单数:",
+          "reflect": "auditPassOrderCount"
+        },
+        {
+          "dec": "点击提现次数:",
+          "reflect": "clickCashCount"
+        },
+        {
+          "dec": "设置取款账户次数:",
+          "reflect": "setDrawCashAccountCount"
+        },
+        {
+          "dec": "提交提现详情次数:",
+          "reflect": "submitCashDetailCount"
+        },
+        {
+          "dec": "成功提现次数:",
+          "reflect": "successCashCount"
+        },
+        {
+          "dec": "放款次数:",
+          "reflect": "paymentCount"
+        },
+        {
+          "dec": "还款次数:",
+          "reflect": "repaymentCount"
+        }
+      ]
+    },
+    "financedata": {
+      "table1": [{
+        "dec": "当日提现笔数:",
+        "reflect": "withdrawDepositOrderCount"
+      },
+        {
+          "dec": "当日提现总额:",
+          "reflect": "withdrawDepositOrderAmount"
+        },
+        {
+          "dec": "当日放款笔数:",
+          "reflect": "paymentOrderCount"
+        },
+        {
+          "dec": "当日放款总额:",
+          "reflect": "paymentOrderAmount"
+        }
+      ],
+      "table2": [{
+        "dec": "当日待放款笔数:",
+        "reflect": "unPaymentCount"
+      },
+        {
+          "dec": "当日待放款总额:",
+          "reflect": "unPaymentAmount"
+        },
+        {
+          "dec": "当日待还款总额:",
+          "reflect": "unRepaymentAmount"
+        },
+        {
+          "dec": "当日还款总额:",
+          "reflect": "repaymentOrderAmount"
+        }
+      ],
+      "table3": [{
+        "dec": "月份",
+        "reflect": "dataOfMonth"
+      },
+        {
+          "dec": "提现笔数",
+          "reflect": "withdrawDepositOrderCount"
+        },
+        {
+          "dec": "提现总额",
+          "reflect": "withdrawDepositOrderAmount"
+        },
+        {
+          "dec": "放款笔数",
+          "reflect": "paymentOrderCount"
+        },
+        {
+          "dec": "放款总额",
+          "reflect": "paymentOrderAmount"
+        },
+        {
+          "dec": "结清笔数",
+          "reflect": "doneCount"
+        },
+        {
+          "dec": "还款总额",
+          "reflect": "paymentOrderAmount"
+        }
+      ]
+    }
+  },
+  "coupon":{
+    "title":"Admin de cupón",
+    "Remarks":"El cupón puede establecer en reducir tasa,reducir interés y días sin interés",
+    "add":"Crear la actividad nueva",
+    "view":"Ver las reglas de uso",
+    "search":"Buscar",
+    "inputContent":"Introduzca el contenido...",
+    "delete":"No se puede recuperar después de borrar",
+    "deleteToast":"Asegurar a borrar",
+    "pushToast":"App envío",
+    "ruleToast":"Reglas de utilizar cupón",
+    "push":"Asegúrese de enviar mensajes a los usuarios no utilizados de los cupones (envío personal, centro de mensajes)",
+    "list":{
+      "table":{
+        "couponId":"Cupón ID",
+        "couponName":"Nombre del cupón",
+        "createTime":"Fecha de creación",
+        "receiveType":"Tipo de conseguido",
+        "offerType":"Tipo de beneficio",
+        "preferentialConditions":"Requisitos de beneficio",
+        "circulation":"Volumen de emisor",
+        "received":"Ha conseguido",
+        "used":"Utilizado",
+        "effectiveTime":"tiempo efectivo",
+        "validityPeriod":"Período de validez",
+        "emergencySuspension":"Pausa urgente",
+        "Status":"Estado de actividad"
+      },
+      "activityStatus":{
+        "allActivities":"Todas actividades",
+        "noActivityStarted":"No actividad empezada",
+        "ongoingActivities":"Actividad en curso",
+        "endedActivity":"Actividad terminada",
+        "suspendedActivity":"Actividad suspendida"
+      },
+      "offer":{
+        "offerType":"Tipo de beneficio",
+        "interestReduction":"Reducir el interés",
+        "interestrateReduction":"Reducir la tasa",
+        "dayFree":"Días sin interés"
+      },
+      "receive":{
+        "registrationCoupon":"Registrarse cupón",
+        "receiveType":"Tipo de conseguido",
+        "systemDistribution":"Enviado direccional",
+        "activityAcquisition":"Actividad exclusiva",
+        "initiativeReceive":"Conseguida iniciativa"
+      },
+      "couponIdname":{
+        "couponId":"Actividad ID",
+        "couponName":"Nombre de actividad"
+      },
+      "btnGroup":{
+        "couponStting":"Configurar cupón",
+        "appPush":"App envío"
+      },
+      "setting":{
+        "description":"Descripción de cupón",
+        "preferentialConditions":"Requisitos de beneficio",
+        "descriptionContent":"La descripción puede ser mostrada al consumidor, por favor ingrese cuidadosamente...",
+        "collection":"Desde conseguir",
+        "effective":"Válido",
+        "activityCrowd":"Multitud de actividad",
+        "limitedPerPerson":"Límite de conseguir",
+        "zhang":"Cupón",
+        "loan":"El préstamo real cumple",
+        "nothreshold":"Sin umbral",
+        "interestReduction":"El interés reduce",
+        "interest":"El intéres posea"
+      },
+      "type":{
+        "day":"Días",
+        "week":"Semanas",
+        "month":"Meses",
+        "year":"Años"
+      },
+      "crowd":{
+        "allUser":"Todos usuarios",
+        "newUser":"Usuarios nuevos",
+        "oldUser":"Usuarios registrados"
+
+      },
+      "prompt":{
+        "selectCrowd":"Selecciona la multitud",
+        "receiveType":"Tipo de conseguido",
+        "offerType":"Tipo de beneficio",
+        "allActivities":"Todas actividades"
+      },
+      "status":{
+        "noStarted":"No empezada",
+        "ongoing":"en curso",
+        "ended":"Terminado",
+        "suspended":"suspendido"
+      },
+      "offertips":{
+        "payMoney": "Monto de préstamo",
+        "interestReduction":"Reducir el interés ",
+        "dayFree":"Días sin interés ",
+        "dailyInterestRate":"Tasa diaria de préstamo",
+        "lendRateMoney": "Interés de préstamo"
+      },
+      "ruleInfo":{
+        "CouponList": {
+          "desc":"Lista de administrar cupón",
+          "info":{
+            "one": "Después de crear la nueva actividad del cupón, pausa el botón de emergencia,cerrar por defecto.",
+            "two": "Lista de cupones, descendente según fecha de creación.",
+            "three": "Estado de actividad, no empezada, en curso,terminado.Encienda el botón de pausa de emergencia y en curso se pausará."
+          }
+        },
+        "preferentialConditions":{
+          "desc":"Requisitos de beneficio",
+          "info":{
+            "amount": "Monto beneficio",
+            "remarks": "Notas"
+          }
+        },
+        "display":{
+          "desc":"Muestra de cupón、regla de conseguir cupón",
+          "info":{
+            "a":"Estado de ID",
+            "b":"Tipo de cupón",
+            "c":"Forma de muestra",
+            "d":"Tiempo válido",
+            "e":"Butón de pausa",
+            "f":"Cupón restante",
+            "g":"Muestra APP",
+            "h":"Butón de conseguir",
+            "i":"Estado de uso",
+            "j":"Moda de lista de cupón",
+            "k":"Notificación"
+          },
+          "notArrived":"No llega",
+          "vouchers":"Lista de conseguir cupón",
+          "inside":"interno",
+          "passed":"Pasado",
+          "shutDown":"cerrar",
+          "open":"abrir",
+          "visible":"visible",
+          "invisible":"invisible",
+          "clickable":"cliqueable",
+          "notClickable":"No cliqueable",
+          "notActive":"No activo",
+          "effective":"efectivo",
+          "invalid":"Inválido",
+          "pendingNormal":"queda conseguir normal",
+          "haveFinished":"Ha terminado",
+          "expired":"Expirado",
+          "stats":"Conseguir con éxito / fallo"
+        },
+        "directionalPush":{
+          "desc":"Enviado direccional",
+          "discountPopup":"Auto-ventanilla de beneficio"
+        },
+        "usageRules":{
+          "desc":"Regla de uso",
+          "info":{
+            "a":"Solo se puede utilizar un cupón para un pedido.",
+            "b":"En la hoja de detalles de retiro, utilice de acuerdo con las condiciones cumplidas.",
+            "c":"Depués de completar el préstamo, puede verlo en los detalles del pedido."
+          }
+        }
+      }
+    }
+  },
+  "channel":{
+    "title":"Gestión de promocionar cógido de invitación de canal",
+    "h5Title":"Gestión de promocionar H5 canal",
+    "prompt":{
+      "channelCode":"Por favor ingrese los dos primeros dígitos del código de invitación",
+      "channelName":"Introduzca nombre de canal",
+      "channelProvider":"Introduzca el proveedor de canal",
+      "channelBranchName":"Introduzca el nombre de sucursal de canal",
+      "invitationCode":"Introduzca el código de invitación",
+      "Id":"Introduzca el número de canal",
+      "link":"Introduzca el enlace",
+      "contactNumber":"Introduzca el número de contacto",
+      "channelId":"Introduzca ID de canal",
+      "streetAddress":"Introduzca la dirección de calle",
+      "contact":"Introduzca el contacto",
+      "error":"El número de canal está duplicado, vuelva a ingresar.",
+      "unusedInvitationCode":"No utiliza el código de  invitación",
+      "generateNumber":"Número generado",
+      "piece":"pieza",
+      "generate":"Introduzca el número generado"
+    },
+    "tabData":{
+      "channelId":"ID de canal",
+      "channelProvider":"proveedor de canal",
+      "channelNumber":"Número de canal",
+      "channelStatus":"Estado de canal",
+      "link":"Enlace"
+    },
+    "channelList":{
+      "name":"Nombre de canal",
+      "id":"Número de canal",
+      "selectChannelBranch":"Ver sucursal de canal"
+    },
+    "channelStatus":{
+      "disable":"Suspender",
+      "open":"Iniciar"
+    },
+    "btn":{
+      "reset":"reajustar",
+      "add":"Añadir canal"
+    },
+    "channelBranch":{
+      "status":"Estado de sucursal de canal",
+      "streetAddress":"Dirección de calle",
+      "btn":{
+        "add":"Añadir sucursal de canal",
+        "generate":"Generar código de invitación rápido",
+        "export":"Exportar con volumen",
+        "ex":"Exportar",
+        "import":"Importar con volumen"
+      },
+      "tabData":{
+        "invitationCode":"Código de invitación",
+        "name":"Nombre de canal sucursal",
+        "contact":"Contacto",
+        "contactNumber":"Número de contacto",
+        "status":"Estado de canal"
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<div class="c-content-wrap">
+  <div class="c-search-wrap">
+    <div class="c-search-group">
+      <!-- <nz-month-picker nzShowTime></<nz-month-picker> -->
+      <div class="c-search-item">
+        <div class="c-search-itemLeft">
+          {{ "financeModule.list.table.askTime" | translate}}:
+        </div>
+        <div class="c-search-itemRight">
+          <nz-date-picker [nzPlaceHolder]='" "' [(ngModel)]="searchModel.dataOfDay"></nz-date-picker>
+          <!-- <span style="color:#999"> ~ </span>
+                    <nz-date-picker [nzPlaceHolder] = '" "' [(ngModel)]="searchModel.endTime"></nz-date-picker> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="c-search-btnGroup">
+      <button nz-button nzType="primary" (click)='search() '>
+        {{ "common.search" | translate}}
+      </button>
+      <button style="margin-left: 20px;" nz-button (click)='reset() '>
+        {{ "common.reset" | translate}}
+      </button>
+    </div>
+  </div>
+  <!-- 当日数据 -->
+  <div class="c-title">当日数据</div>
+  <div class="c-flex-row-around reportWrap mart">
+    <div class="reportWrapFlex">
+      <nz-table #borderedTable nzBordered [nzData]="languagePack['data1']" [nzShowPagination]="false">
+        <tbody *ngIf="todayData">
+          <tr *ngFor="let data of languagePack['data1']">
+            <td>{{data.dec}}</td>
+            <td>{{todayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+    <div class="reportWrapFlex">
+      <nz-table #borderedTable1 nzBordered [nzData]="languagePack['data2']" [nzShowPagination]="false">
+        <tbody *ngIf="todayData">
+          <tr *ngFor="let data of borderedTable1.data">
+              <td>{{data.dec}}</td>
+              <td>{{todayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+    <div class="reportWrapFlex">
+      <nz-table #borderedTable2 nzBordered [nzData]="languagePack['data3']" [nzShowPagination]="false">
+        <tbody *ngIf="todayData">
+          <tr *ngFor="let data of borderedTable2.data">
+              <td>{{data.dec}}</td>
+              <td>{{todayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+
+  <!-- 历史数据 -->
+  <div class="c-title">历史数据</div>
+  <div class="c-flex-row-around reportWrap mart">
+    <div class="reportWrapFlex" *ngIf="historydayData">
+      <nz-table #hisTable nzBordered [nzData]="languagePack[data4]" [nzShowPagination]="false">
+        <tbody>
+          <tr *ngFor="let data of languagePack['data4']">
+            <td>{{data.dec}}</td>
+            <td>{{historydayData[data.reflect] || 0}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
+</div>

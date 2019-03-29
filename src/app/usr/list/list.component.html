@@ -1,0 +1,76 @@
+<div class="c-content-wrap">
+    <div class="c-search-wrap">
+        <div class="c-search-group">
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "usrModule.list.table.registeDate" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <nz-date-picker [(ngModel)]="searchModel.registerTimeStart"></nz-date-picker>
+                    <span style="color:#999"> ~ </span>
+                    <nz-date-picker [(ngModel)]="searchModel.registerTimeEnd"></nz-date-picker>
+                </div>
+            </div>
+        </div>
+        <div class="c-search-group">
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "usrModule.list.table.realName" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input  nz-input type="text" [(ngModel)] = 'searchModel.username'>
+                </div>
+            </div>
+
+            <div class="c-search-item">
+                <div class="c-search-itemLeft">
+                    {{ "usrModule.list.table.idCard" | translate}}:
+                </div>
+                <div class="c-search-itemRight">
+                    <input  nz-input type="text" [(ngModel)] = 'searchModel.idNumber'>
+                </div>
+            </div>
+
+            <div class="c-search-item">
+                <!-- <div>
+                    <nz-select style="width: 120px;" nzAllowClear nzPlaceHolder="选择状态">
+                        <nz-option nzValue="null" nzLabel="全部"></nz-option>
+                        <nz-option *ngFor = 'let item of enumStatus' [nzValue] = 'item.value' [nzLabel]='item.name' >
+                        </nz-option>
+                    </nz-select>
+                </div> -->
+                <div class="c-search-itemLeft">
+                    {{ "usrModule.list.table.mobile" | translate}}:
+                </div>
+                <div class="c-search-itemRight" style="margin-right: 20px">
+                    <input nz-input type="text" [(ngModel)] = 'searchModel.phoneNumber' >
+                </div>
+            </div>
+        </div>
+        <div class="c-search-btnGroup">
+            <button nz-button nzType="primary"  (click) = 'search() '>
+                {{ "common.search" | translate}}
+            </button>
+            <button style="margin-left: 20px;" nz-button (click) = 'reset() '>
+                {{ "common.reset" | translate}}
+            </button>
+        </div>
+    </div>
+
+    <c-table [tableData] = 'tableData'>
+    </c-table>
+    <div class="c-pag">
+        <nz-pagination [nzShowTotal]="totalTemplate" (nzPageIndexChange)='pageChange($event , "page")' (nzPageSizeChange) = 'pageChange($event , "size")' [nzPageIndex]="searchModel.currentPage"  [nzTotal]="totalSize" nzShowSizeChanger nzShowQuickJumper></nz-pagination>
+        <ng-template #totalTemplate let-total>
+            <span>
+                {{ "common.total" | translate }}
+            </span>
+            <span>
+                {{ totalSize }}
+            </span>
+            <span>
+                {{ "common.pageUnit" | translate }}
+            </span>
+        </ng-template>
+    </div>
+</div>

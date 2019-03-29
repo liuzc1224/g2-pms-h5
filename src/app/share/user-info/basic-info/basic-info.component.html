@@ -1,0 +1,62 @@
+<div class="locationInfoWrap">
+  <div class="c-title">
+      征信基本信息对比
+  </div>
+
+  <div class="dataWrap">
+    <nz-spin *ngIf='!zxOnerInfo'>
+    </nz-spin>
+
+    <div *ngIf='zxOnerInfo' class="c-flex-row-allStart c-flex-auto-wrap">
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.zxOner" | translate)[0]['name'] }} :
+        </div>
+        <div class="c-data-data">
+          <span style="display:block;">{{ zxOnerInfo[("orderModule.auth.zxOner" | translate)[0]['reflect']] }}</span>
+          <span style="color:#acacac">{{ zxOnerInfo[("orderModule.auth.zxOner" | translate)[0]['zxReflect']] || 'no' }}</span>
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.zxOner" | translate)[1]['name'] }} :
+        </div>
+        <div class="c-data-data">
+          <span style="display:block;">{{ rfc || 'no' }}</span>
+          <span style="color:#acacac"> {{ zxOnerInfo[("orderModule.auth.zxOner" | translate)[1]['zxReflect']] || 'no' }} </span>
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.zxOner" | translate)[2]['name'] }} :
+        </div>
+        <div class="c-data-data">
+          <span style="display:block;"> {{ zxOnerInfo[("orderModule.auth.zxOner" | translate)[2]['reflect']] }} </span>
+          <span style="color:#acacac"> {{ zxOnerInfo[("orderModule.auth.zxOner" | translate)[2]['zxReflect']] || 'no' }} </span>
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.zxOner" | translate)[3]['name'] }} :
+        </div>
+        <div class="c-data-data">
+          <span style="display:block;"> {{ (zxOnerInfo[("orderModule.auth.zxOner" | translate)[3]['reflect']]) | SexPipe}}</span>
+          <span style="color:#acacac">{{ zxOnerInfo[("orderModule.auth.zxOner" | translate)[3]['zxReflect']] || 'no' }}</span>
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.zxOner" | translate)[4]['name'] }} :
+        </div>
+        <div class="c-data-data">
+          <span style="display:block;">{{ (zxOnerInfo[("orderModule.auth.zxOner" | translate)[4]['reflect']]) | dateFormat }}</span>
+          <span style="color:#acacac">{{ (zxOnerInfo[("orderModule.auth.zxOner" | translate)[4]['zxReflect']]) || 'no' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

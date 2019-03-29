@@ -1,0 +1,57 @@
+<div class="locationInfoWrap">
+    <div class="c-title">
+        订单信息
+    </div>
+
+    <div class="dataWrap">
+        <nz-spin *ngIf = '!orderInfo'>
+        </nz-spin>
+
+        <div *ngIf = 'orderInfo' class="c-flex-row-allStart c-flex-auto-wrap">
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.orderInfo" | translate)[0]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ orderInfo[("orderModule.auth.orderInfo" | translate)[0]['reflect']] }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.orderInfo" | translate)[1]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ orderInfo[("orderModule.auth.orderInfo" | translate)[1]['reflect']] }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.orderInfo" | translate)[2]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ orderInfo[("orderModule.auth.orderInfo" | translate)[2]['reflect']] | PurposePipe }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.orderInfo" | translate)[3]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ orderInfo[("orderModule.auth.orderInfo" | translate)[3]['reflect']] }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.orderInfo" | translate)[4]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ orderInfo[("orderModule.auth.orderInfo" | translate)[4]['reflect']] }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

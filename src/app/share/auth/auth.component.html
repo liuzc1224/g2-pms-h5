@@ -1,0 +1,168 @@
+<div>
+  <div class="card-img-box" *ngIf="photoInfo">
+    <!-- 身份证正面 -->
+    <div *ngIf="photoInfo.front">
+      <img-wrapper [title]=' "orderModule.order.auth.photo.front" | translate ' [imgUrl]="photoInfo.front">
+
+      </img-wrapper>
+    </div>
+    <!-- 身份证反面 -->
+    <div *ngIf="photoInfo.reverse">
+      <img-wrapper [title]=' "orderModule.order.auth.photo.back" | translate ' [imgUrl]="photoInfo.reverse">
+
+      </img-wrapper>
+    </div>
+    <!-- 最佳全景照 -->
+    <div *ngIf="faceDate && faceDate.imageEnv">
+      <img-wrapper [title]=' "orderModule.order.auth.photo.imageEnv" | translate ' [imgUrl]="faceDate.imageEnv">
+
+      </img-wrapper>
+    </div>
+    <!-- 住址证明 -->
+    <div *ngIf="familyInfo && familyInfo.residentialProof">
+      <img-wrapper [title]=' "orderModule.order.auth.photo.residentialProof" | translate ' [imgUrl]="familyInfo.residentialProof">
+
+      </img-wrapper>
+    </div>
+
+    <div *ngIf="photoInfo.incomeProof">
+      <img-wrapper [title]=' "orderModule.order.auth.photo.income" | translate ' [imgUrl]="photoInfo.incomeProof">
+
+      </img-wrapper>
+    </div>
+
+  </div>
+  <!--  定位信息 -->
+  <div class="sectionInfo_Wrap">
+    <user-info-location [usrId]="userId">
+
+    </user-info-location>
+  </div>
+  <!--  历史订单 -->
+  <div class="sectionInfo_Wrap">
+    <div class="c-title">
+      历史订单
+    </div>
+    <c-table [tableData]='tableData'>
+    </c-table>
+  </div>
+  <!-- 订单信息 -->
+  <div class="sectionInfo_Wrap">
+    <user-order-info [usrId]="userId" [orderId]="orderId">
+
+    </user-order-info>
+  </div>
+  <!-- 征信基本信息对比 -->
+  <div class="sectionInfo_Wrap">
+    <user-info-basic [usrId]="userId" [orderId]="orderId" [rfc]='rfc'>
+
+    </user-info-basic>
+  </div>
+  <!-- 用户其他基本信息 -->
+  <div class="sectionInfo_Wrap">
+    <user-other-info [usrId]="userId" [orderId]="orderId" [rfc]='rfc' [faceDate] = "faceDate">
+
+    </user-other-info>
+  </div>
+  <!-- 家庭信息 -->
+  <div class="sectionInfo_Wrap">
+    <user-family-info [usrId]="userId" [orderId]="orderId" [familyInfo] = 'familyInfo'>
+
+    </user-family-info>
+  </div>
+
+  <div class="sectionInfo_Wrap">
+    <user-income-info [usrId]="userId" [orderId]="orderId">
+
+    </user-income-info>
+  </div>
+  <!-- 紧急联系人 -->
+  <div class="sectionInfo_Wrap">
+    <user-contact-info [usrId]="userId" [orderId]="orderId">
+
+    </user-contact-info>
+  </div>
+
+  <!-- 征信地址登记记录 -->
+  <div class="auth-table-wrap">
+    <div class="c-title">
+      征信地址登记记录
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td class="tr-tlt" *ngFor="let item of ('orderModule.auth.DomicilioVO' | translate)">{{item.name}}</td>
+        </tr>
+        <tr *ngFor="let item of domicilioVOList">
+          <td *ngFor="let data of ('orderModule.auth.DomicilioVO' | translate)">{{ item[data.reflect] || 'no' }}</td>
+        </tr>
+        <tr *ngIf='!domicilioVOList["length"]'>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 征信借贷明细 -->
+  <div class="auth-table-wrap">
+    <div class="c-title">
+      征信借贷明细
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td class="tr-tlt" *ngFor="let item of ('orderModule.auth.circuloInfo' | translate)">{{item.name}}</td>
+        </tr>
+        <tr *ngFor="let item of cuentaVOList">
+          <td *ngFor="let data of ('orderModule.auth.circuloInfo' | translate)">{{ item[data.reflect] || 'no' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 征信访问信息 -->
+  <div class="auth-table-wrap">
+    <div class="c-title">
+      征信访问信息
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td class="tr-tlt" *ngFor="let item of ('orderModule.auth.consultasEfectuadaVOList' | translate)">{{item.name}}</td>
+        </tr>
+        <tr *ngFor="let item of consultasEfectuadaVOList">
+          <td *ngFor="let data of ('orderModule.auth.consultasEfectuadaVOList' | translate)">{{ item[data.reflect] ||
+            'no' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 征信评分 -->
+  <div class="auth-table-wrap">
+    <div class="c-title">
+      征信评分
+    </div>
+    <div class="scoreBox">
+      <p class="scoreHeader"><span>评分</span><span>得分描述</span></p>
+      <div class="scoreL" *ngIf="ScoreVO['length']">
+        <p style="height:140px;line-height:140px;font-size:30px;">{{ScoreVO[0].valor}}</p>
+      </div>
+      <div class="scoreR" *ngIf="ScoreVO['length']">
+        <!-- <p>{{item.razon1}}{{item.razon1Desc}}</p> -->
+        <p>{{ScoreVO[0].razon1}}:{{ScoreVO[0].razon1Desc}}</p>
+        <p>{{ScoreVO[0].razon2}}:{{ScoreVO[0].razon2Desc}}</p>
+        <p>{{ScoreVO[0].razon3}}:{{ScoreVO[0].razon3Desc}}</p>
+        <p>{{ScoreVO[0].razon4}}:{{ScoreVO[0].razon4Desc}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

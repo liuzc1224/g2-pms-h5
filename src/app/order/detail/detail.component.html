@@ -1,0 +1,701 @@
+<div class="c-content-wrap">
+    <div class="c-flex-row-allStart">
+
+        <div class="half-block">
+            <div class="c-title">
+                {{ "orderModule.order.basicInfo.title" | translate }}
+            </div>
+            <div class="infoContent">
+                <basic-info #basicInfo>
+
+                </basic-info>
+            </div>
+        </div>
+        <div class="half-block">
+            <div class="c-title">
+                {{ "orderModule.order.approveInfo.title" | translate }}
+            </div>
+            <div class="infoContent">
+                <approve #approve>
+                </approve>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-row-allStart"  *ngIf = 'orderInfo'>
+        <div class="c-title" style="margin-bottom: 10px">
+            {{ "orderModule.order.basicInfo.loanInfo" | translate }}
+        </div>
+
+        <div class="c-flex-row-start c-info-wrap" style="padding: 0px 5px">
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.userName" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.userName }}
+                </div>
+            </div>
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.userPhone" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.userPhone }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.userIdNo" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.userIdNo }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.userId" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.userId }}
+                </div>
+            </div>
+        </div>
+
+        <div class="c-flex-row-start c-info-wrap" style="padding: 0px 5px">
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.orderNo" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.orderNo }}
+                </div>
+            </div>
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.applyMoney" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.applyMoney }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.applyMonth" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.applyMonth }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.createTime" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.createTime | dateFormat }}
+                </div>
+            </div>
+        </div>
+
+        <div class="c-flex-row-start c-info-wrap" style="padding: 0 5px">
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.loanDays" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.loanDays }}
+                </div>
+            </div>
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.lendRate" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.lendRate }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.lendRateMoney" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.lendRateMoney }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.currentRealRepay" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.currentRealRepay }}
+                </div>
+            </div>
+        </div>
+
+        <div class="c-flex-row-start c-info-wrap" style="padding: 0 5px">
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.appreciationMoney" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.appreciationMoney }}
+                </div>
+            </div>
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.appreciationRate" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.appreciationRate }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.overDueRateMoney" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.overDueRateMoney }}
+                </div>
+            </div>
+
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.overDueRate" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.overDueRate }}
+                </div>
+            </div>
+        </div>
+
+        <div class="c-flex-row-start c-info-wrap" style="padding: 0 5px">
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.modifyTime" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.modifyTime | dateFormat }}
+                </div>
+            </div>
+            <div class="c-flex-row-start" style="width: 25%">
+                <div class="c-info-title">
+                    {{ "orderList.allList.table.payDate" | translate }} :
+                </div>
+                <div class="c-info-content">
+                    {{ orderInfo.payDate | dateFormat }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabWrap">
+        <nz-tabset>
+            <nz-tab nzTitle="Pedido histórico" (nzSelect)="selectTab('1')">
+                <record #record [type]="'loan'"></record>
+            </nz-tab>
+
+            <!-- <nz-tab nzTitle = "Notas de solicitud" (nzSelect)="selectTab('2')">
+                 <record #recordAsk [type]="'ask'"></record>
+            </nz-tab> -->
+
+            <nz-tab nzTitle = "Información de certificación" (nzSelect)="selectTab('3')">
+                <!-- <auth #auth>
+
+                </auth> -->
+            </nz-tab>
+
+            <nz-tab nzTitle = "Información de actos" (nzSelect)="selectTab('4')">
+                <div class="c-title">
+                    {{ "orderModule.order.basicInfo.actInfo" | translate }}
+                </div>
+
+                <div>
+                    <table class="table_wrap">
+                        <thead>
+                            <tr>
+                                <th>
+                                    {{ "orderModule.order.basicInfo.step" | translate }}
+                                </th>
+                                <th>
+                                    {{ "orderModule.order.basicInfo.stay" | translate }}
+                                </th>
+                                <th>
+                                    {{ "orderModule.order.basicInfo.stayTrans" | translate }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody *ngIf = 'actData'>
+                            <tr *ngFor = 'let item of  actData , let idx = index'>
+                                <td>
+                                    <span>
+                                        {{ "orderModule.order.basicInfo.uinit" | translate }}
+                                    </span>
+
+                                    <span>
+                                        {{ idx + 1 }}
+                                    </span>
+                                    <span>
+                                        {{ "orderModule.order.basicInfo.step_unit" | translate }}
+                                    </span>
+                                </td>
+                                <td>
+                                    {{ item }}
+                                </td>
+                                <td>
+                                    {{ item | seconds }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </nz-tab>
+
+            <nz-tab nzTitle = "用户银行卡信息" (nzSelect)="selectTab('5')">
+                <table class="table_wrap">
+                    <thead>
+                        <tr>
+                            <th>
+                                {{ "orderDetail.bankInfo.accountId" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.userName" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.bankCardNum" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.createTime" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.idCardNum" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.modifyTime" | translate }}
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody *ngIf = 'bankInfo'>
+                        <tr *ngFor = 'let item of  bankInfo , let idx = index'>
+                            <td>
+                                {{ item.accountId }}
+                            </td>
+                            <td>
+                                {{ item.userName }}
+                            </td>
+                            <td>
+                                {{ item.bankCardNum }}
+                            </td>
+                            <td>
+                                {{ item.createTime | dateFormat }}
+                            </td>
+                            <td>
+                                {{ item.idCardNum }}
+                            </td>
+                            <td>
+                                {{ item.modifyTime | dateFormat }}
+                            </td>
+                    </tbody>
+                </table>
+            </nz-tab>
+            <nz-tab nzTitle = "Notas de verificación" *ngIf = 'para && para.order' (nzSelect)="selectTab('6')">
+                <table class="table_wrap">
+                    <thead>
+                        <tr>
+                            <th>
+                                {{ ("orderModule.record.askHeaderInfo" | translate)[2] }}
+                            </th>
+                            <th>
+                                {{ ("orderModule.record.askHeaderInfo" | translate)[4] }}
+                            </th>
+                            <th>
+                                {{ "systemModule.admin.table.remark" | translate }}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf = 'bankInfo'>
+                        <tr *ngFor = 'let item of  bankInfo , let idx = index'>
+                            <td>
+                                {{ item.auditMoney }}
+                            </td>
+                            <td>
+                                {{ item.status | StatusPipe }}
+                            </td>
+                            <td>
+                                {{ item.comment }}
+                            </td>
+                    </tbody>
+                </table>
+            </nz-tab>
+
+            <nz-tab nzTitle = "Notas de retirar" *ngIf = 'para && para.order' (nzSelect)="selectTab('7')">
+                <table class="table_wrap">
+                    <thead>
+                        <tr>
+                            <th>
+                                {{ "systemModule.admin.table.userName" | translate }}
+                            </th>
+                            <th>
+                                {{ "systemModule.admin.table.mobile" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.bankName" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.bankCardNum" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderDetail.bankInfo.idCardNum" | translate }}
+                            </th>
+                            <th>
+                                {{ ("orderModule.record.askHeaderInfo" | translate)[2] }}
+                            </th>
+                            <th>
+                                {{ ("orderModule.record.askHeaderInfo" | translate)[4] }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.table.askTime" | translate }}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf = 'paymentRecordInfo'>
+                        <tr *ngFor = 'let item of  paymentRecordInfo , let idx = index'>
+                            <td>
+                                {{ item.userName }}
+                            </td>
+                            <td>
+                                {{ item.phoneNumber }}
+                            </td>
+                            <td>
+                                {{ item.bankName }}
+                            </td>
+                            <td>
+                                {{ item.bankCardNum }}
+                            </td>
+                            <td>
+                                {{ item.idCardNum }}
+                            </td>
+                            <td>
+                                {{ item.applyCash }}
+                            </td>
+                            <td>
+                                {{ item.status | StatusPipe }}
+                            </td>
+                            <td>
+                                {{ item.createTime | dateFormat }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </nz-tab>
+
+            <nz-tab nzTitle = "Notas de prestar" *ngIf = 'para && para.order' (nzSelect)="selectTab('8')">
+                <table class="table_wrap">
+                    <thead>
+                        <tr>
+                            <th>
+                                {{ "financeModule.list.table.payCode" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.table.repayCode" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.table.payMoney" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.model.repayType" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.table.paymentResult" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.model.bankName" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.model.account" | translate }}
+                            </th>
+                            <th>
+                                {{ "orderList.allList.table.payDate" | translate }}
+                            </th>
+                            <th>
+                                {{ "financeModule.list.model.billNo" | translate }}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf = 'LoanRecordInfo'>
+                        <tr *ngFor = 'let item of LoanRecordInfo , let idx = index'>
+                            <td>
+                                {{ item.payCode }}
+                            </td>
+                            <td>
+                                {{ item.repayCode }}
+                            </td>
+                            <td>
+                                {{ item.payMoney }}
+                            </td>
+                            <td>
+                                {{ item.paymentType | PayTypePipe}}
+                            </td>
+                            <td>
+                                {{ item.paymentResult | paymentResult }}
+                            </td>
+                            <td>
+                                {{ item.ourBank }}
+                            </td>
+                            <td>
+                                {{ item.ourAccount }}
+                            </td>
+                            <td>
+                                {{ item.payDate | dateFormat }}
+                            </td>
+                            <td>
+                                {{ item.serialNumber }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </nz-tab>
+
+            <nz-tab nzTitle = "Plan de pagar" *ngIf = 'para && para.order' (nzSelect)="selectTab('9')">
+                <div class="scrollContainer">
+                    <div class="scrollWrap">
+                        <table class="table_wrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        {{ "systemModule.admin.table.userName" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "systemModule.admin.table.mobile" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "financeModule.list.table.idCard" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.totalPeriod" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "financeModule.list.table.payCode" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "financeModule.list.table.repayCode" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.overDueRateMoney" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.dueDay" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.currentPeriod" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.currentRepay" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.realRepayMoney" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.planRepaymentDate" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.realRepaymentDate" | translate }}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf = 'repaymentRecord'>
+                                <tr *ngFor = 'let item of repaymentRecord , let idx = index'>
+                                    <td>
+                                        {{ item.userName }}
+                                    </td>
+                                    <td>
+                                        {{ item.userPhone }}
+                                    </td>
+                                    <td>
+                                        {{ item.userIdNo }}
+                                    </td>
+                                    <td>
+                                        {{ item.totalPeriod }}
+                                    </td>
+                                    <td>
+                                        {{ item.payCode }}
+                                    </td>
+                                    <td>
+                                        {{ item.repayCode }}
+                                    </td>
+                                    <td>
+                                        {{ item.overDueFine }}
+                                    </td>
+                                    <td>
+                                        {{ item.dueDay }}
+                                    </td>
+                                    <td>
+                                        {{ item.currentPeriod }}
+                                    </td>
+                                    <td>
+                                        {{ item.currentRepay}}
+                                    </td>
+                                    <td>
+                                        {{ item.realRepayMoney }}
+                                    </td>
+                                    <td>
+                                        {{ item.planRepaymentDate | dateFormat }}
+                                    </td>
+                                    <td>
+                                        {{ item.realRepaymentDate | dateFormat }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </nz-tab>
+
+            <nz-tab nzTitle = "Notas de pagar" *ngIf = 'para && para.order' (nzSelect)="selectTab('10')">
+                <div class="scrollContainer">
+                    <div class="scrollWrap">
+                        <table class="table_wrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        {{ "orderList.allList.table.currentRealRepay" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.hasRepay" | translate }}
+                                    </th>
+                                    <th>
+                                        {{ "orderList.allList.table.realRepaymentDate" | translate }}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf = 'repaymentRecords'>
+                                <tr *ngFor = 'let item of repaymentRecords , let idx = index'>
+                                    <td>
+                                        {{ item.repayMoney }}
+                                    </td>
+                                    <td>
+                                        {{ item.currentRepay }}
+                                    </td>
+                                    <td>
+                                        {{ item.repaymentDate | dateFormat }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </nz-tab>
+        </nz-tabset>
+    </div>
+</div>
+
+<div class="c-flex-row-right btnGroupWrap" *ngIf = 'para.from == "riskList" && para.status == 1 '>
+    <button (click)='showModal("risk")' class="c-btn-width operBtns" nz-button nzType="primary">
+        {{ "orderList.allList.opera.pass" | translate }}
+    </button>
+</div>
+
+<div class="c-flex-row-right btnGroupWrap" *ngIf = 'permission && para.from == "riskList" && para.status != 1 '>
+    <button (click)='showModal("risk" , true)' class="c-btn-width operBtns" nz-button nzType="primary">
+        {{ "orderList.allList.opera.retreat" | translate }}
+    </button>
+</div>
+
+<nz-modal *ngIf = 'para.from == "riskList" ' [(nzVisible)]="riskMark" [nzTitle]="riskTitle" [nzContent]="riskContent" [nzFooter]="riskFooter" (nzOnCancel)="riskMark = false">
+
+    <ng-template #riskTitle>
+        <span>
+            {{ "orderList.allList.opera.operate" | translate }}
+        </span>
+    </ng-template>
+
+    <ng-template #riskContent>
+        <form nz-form [nzLayout]="'inline'" [formGroup]="riskForm">
+
+            <nz-form-item class='c-formSec'>
+                <nz-form-label [nzSm]="7" nzRequired nzFor="status">
+                    {{ "financeModule.list.model.status" | translate }}
+                </nz-form-label>
+                <nz-form-control [nzSm]="16"  [nzOffset]='1'>
+                    <nz-select
+                        [nzPlaceHolder] = '"financeModule.list.model.choseStatus" | translate'
+                        nzAllowClear
+                        formControlName="status"
+                        [nzDisabled]="para.status != 1"
+                        id="status"
+                    >
+                        <div *ngFor = 'let item of risk_enum ,let idx = index'>
+                            <nz-option
+                                [nzValue]="item.value"
+                                [nzLabel]="item.name"
+                                *ngIf = ' (para.status != 1 && item.value == "1") || (para.status == "1" && item.value != "1") '
+                            >
+                            </nz-option>
+                        </div>
+                    </nz-select>
+                    <nz-form-explain *ngIf="riskForm.get('status').dirty && riskForm.get('status').errors">
+                        <span>
+                            {{ "financeModule.list.table.status" | translate}}
+                        </span>
+                        <span>
+                            {{ "common.validator.notEmpty" | translate }}
+                        </span>
+                    </nz-form-explain>
+                </nz-form-control>
+            </nz-form-item>
+
+
+            <nz-form-item class='c-formSec' *ngIf = 'riskForm.get("status").value == 2'>
+                <nz-form-label nzRequired [nzSm]="7"  nzFor="auditAmount">
+                    {{ "orderList.allList.opera.auditAmount" | translate }}
+                </nz-form-label>
+                <nz-form-control [nzSm]="16"  [nzOffset]='1'>
+                    <input nz-input formControlName="auditAmount" id="auditAmount" [placeholder] = ' "orderList.allList.opera.auditAmount" | translate '>
+                    <nz-form-explain *ngIf="riskForm.get('auditAmount').dirty && riskForm.get('auditAmount').errors">
+                        <span>
+                            {{ "orderList.allList.opera.auditAmount" | translate }}
+                        </span>
+                        <span>
+                            {{ "common.validator.notEmpty" | translate }}
+                        </span>
+                    </nz-form-explain>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item class='c-formSec' >
+                <nz-form-label [nzSm]="7"  nzFor="comment">
+                    {{ "orderList.allList.opera.comment" | translate }}
+                </nz-form-label>
+                <nz-form-control [nzSm]="16"  [nzOffset]='1'>
+                    <textarea nz-input formControlName="comment" cols = '6' rows="4" [placeholder] = ' "orderList.allList.opera.comment" | translate ' id="msgText"></textarea>
+                    <nz-form-explain *ngIf="riskForm.get('comment').dirty && riskForm.get('comment').errors">
+                        <span>
+                                {{ "orderList.allList.opera.comment" | translate }}
+                        </span>
+                        <span>
+                            {{ "common.validator.notEmpty" | translate }}
+                        </span>
+                    </nz-form-explain>
+                </nz-form-control>
+            </nz-form-item>
+
+        </form>
+    </ng-template>
+
+    <ng-template #riskFooter>
+        <button nz-button nzType="primary" (click)='makeOrderCheck($event)'>
+            {{ "common.operate.sure" | translate }}
+        </button>
+
+        <button nz-button nzType="default" (click)='riskMark = false'>
+            {{ "common.operate.close" | translate }}
+        </button>
+    </ng-template>
+</nz-modal>

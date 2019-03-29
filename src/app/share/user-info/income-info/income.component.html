@@ -1,0 +1,59 @@
+<div class="locationInfoWrap">
+    <div class="c-title">
+        工作情况
+    </div>
+
+    <div class="dataWrap">
+        <nz-spin *ngIf = '!incomeInfo'>
+        </nz-spin>
+
+        <div *ngIf = 'incomeInfo' class="c-flex-row-allStart c-flex-auto-wrap">
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.workInfo" | translate)[0]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ incomeInfo.incomeSource | IncomeSource }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.workInfo" | translate)[1]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ incomeInfo.company | nullPipe }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.workInfo" | translate)[3]['name'] }} :
+                </div>
+                <div class="c-data-data">
+                    {{ incomeInfo.position | nullPipe }}
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.workInfo" | translate)[2]['name'] }} :
+                </div>
+                <div class="c-data-data" *ngIf="incomeInfo">
+                    {{ incomeInfo.companyAddress }}--{{ incomeInfo.companyBlock }}--{{ incomeInfo.companyMpio}}--{{ incomeInfo.companyCity }}--{{ incomeInfo.companyState }}--
+                    <!-- {{ incomeInfo.companyAddress || "no" }} -->
+                </div>
+            </div>
+
+            <div class="c-data-section c-flex-row-allStart">
+                <div class="c-data-title">
+                    {{ ("orderModule.auth.workInfo" | translate)[4]['name'] }} :
+                </div>
+                <div class="c-data-data" style="color:blue;cursor:pointer;"  *ngIf="incomeInfo" (click)="showImg(4)">
+                        {{ "common.operate.clickSee" | translate }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

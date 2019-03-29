@@ -1,0 +1,36 @@
+<div class="record">
+  <nz-table #middleTable nzSize="middle" [nzData]="orderList" *ngIf=" type === 'loan' " [nzPageSize]="5">
+    <thead>
+      <tr>
+        <th *ngFor=" let item of ('orderModule.record.headerInfo' | translate) ">{{item}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of middleTable.data">
+        <td>{{data.orderNo}}</td>
+        <td>{{data.applyMoney}}</td>
+        <td>{{data.loanDays}}</td>
+        <td>{{data.overDueRateMoney > 0 ? ('orderModule.record.detStatus' | translate)[0] : ('orderModule.record.detStatus' | translate)[1]}}</td>
+        <td>{{ data.status | OrderStatusPipe }}</td>
+        <td style="cursor: pointer;color: #1890ff;" (click)="goDetail(data)">{{'common.btnGroup.a' | translate}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+
+  <nz-table #middleTable nzSize="middle" [nzData]="orderList" *ngIf=" type === 'ask' " [nzPageSize]="5">
+    <thead>
+      <tr>
+        <th *ngFor=" let item of ('orderModule.record.askHeaderInfo' | translate) ">{{item}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of middleTable.data">
+        <td>{{data.orderNo}}</td>
+        <td>{{data.createTime}}</td>
+        <td>{{data.applyMoney}}</td>
+        <td>{{data.loanDays}}</td>
+        <td>{{ data.status | OrderStatusPipe }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

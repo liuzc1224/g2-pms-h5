@@ -1,0 +1,39 @@
+<div class="locationInfoWrap">
+    <div class="c-title">
+        {{ "orderModule.auth.friendInfo.friend" | translate}}
+    </div>
+
+    <div class="dataWrap">
+        <nz-spin *ngIf = '!contactList'>
+        </nz-spin>
+
+        <table class="table_wrap">
+            <thead>
+                <tr>
+                    <th>
+                        {{ "orderModule.auth.friendInfo.friend" | translate}}
+                    </th>
+                    <th>
+                        {{ "usrModule.list.table.realName" | translate}}
+                    </th>
+                    <th>
+                        {{ "orderModule.auth.friendInfo.call" | translate}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of contactList;let i = index">
+                    <td>
+                        {{ "orderModule.auth.friendInfo.friend" | translate}}{{i + 1}}
+                    </td>
+                    <td>
+                        {{ item.contactName }}
+                    </td>
+                    <td>
+                        {{ item.contactPhone }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

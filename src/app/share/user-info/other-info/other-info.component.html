@@ -1,0 +1,73 @@
+<div class="locationInfoWrap">
+  <div class="c-title">
+    用户其他基本信息
+  </div>
+
+  <div class="dataWrap">
+    <nz-spin *ngIf='!basicInfo'>
+    </nz-spin>
+
+    <div *ngIf='basicInfo' class="c-flex-row-allStart c-flex-auto-wrap">
+      <div class="c-data-section c-flex-row-allStart" *ngFor="let item of ('orderModule.auth.baseInfo' | translate);">
+        <div class="c-data-title">
+          {{ item.name }} :
+        </div>
+        <div class="c-data-data" *ngIf="item.pip === 'nullPipe'">
+          {{ basicInfo[item.reflect] }}
+        </div>
+        <div class="c-data-data" *ngIf="item.pip === 'EduPipe'">
+          {{ basicInfo[item.reflect] | EduPipe }}
+        </div>
+        <div class="c-data-data" *ngIf="item.pip === 'MarryPipe'">
+          {{ basicInfo[item.reflect] | MarryPipe }}
+        </div>
+        <div class="c-data-data" style="color:blue;cursor:pointer;" *ngIf="item.pip === 'img'" (click)="showImg(item.reflect)">
+          {{ "common.operate.clickSee" | translate }}
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          信用卡后四位:
+        </div>
+        <div class="c-data-data" >
+          {{ authenticatio && authenticatio.creditCardFourAfter | nullPipe }}
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          过去的24个月内是否有车贷:
+        </div>
+        <div class="c-data-data" >
+          {{ authenticatio && authenticatio.hasCarLoanTwentyFourMonth ? "是" : "否" }}
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          当前是否有抵押贷款:
+        </div>
+        <div class="c-data-data" >
+          {{ (authenticatio && authenticatio.hasMortgageLoan) ? "是" : "否" }}
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf='faceDate' class="c-flex-row-allStart c-flex-auto-wrap">
+      <div class="c-data-section c-flex-row-allStart" *ngFor="let item of ('orderModule.auth.baseInfoface' | translate);">
+        <div class="c-data-title">
+          {{ item.name }} :
+        </div>
+        <div class="c-data-data" *ngIf="item.pip === 'nullPipe'">
+          {{ faceDate[item.reflect] | nullPipe }}
+        </div>
+        <div class="c-data-data" style="color:blue;cursor:pointer;" *ngIf="item.pip === 'img'" (click)="showImg(item.reflect)">
+          {{ "common.operate.clickSee" | translate }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

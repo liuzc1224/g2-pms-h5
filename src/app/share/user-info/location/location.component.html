@@ -1,0 +1,63 @@
+<div class="locationInfoWrap">
+  <div class="c-title">
+    定位信息
+  </div>
+
+  <div class="dataWrap">
+    <nz-spin *ngIf='!locationInfo'>
+    </nz-spin>
+
+    <div *ngIf='locationInfo' class="c-flex-row-allStart c-flex-auto-wrap">
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.locDataSet" | translate)[0]['name'] }} :
+        </div>
+        <div class="c-data-data">
+          {{ locationInfo.createTime | dateFormat }}
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.locDataSet" | translate)[1]['name'] }} :
+        </div>
+        <div class="c-data-data c-click-able" (click)="getlocation(locationInfo.latitude ,locationInfo.longitude)">
+          {{ locationInfo.longitude | nullPipe }}
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.locDataSet" | translate)[2]['name'] }} :
+        </div>
+        <div class="c-data-data c-click-able" (click)="getlocation(locationInfo.latitude ,locationInfo.longitude)">
+          {{ locationInfo.latitude | nullPipe }}
+        </div>
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.locDataSet" | translate)[3]['name'] }} :
+        </div>
+        <div class="c-data-data c-click-able" (click)="getIpLocate(locationInfo.ipAddress)">
+          {{ locationInfo.ipAddress | nullPipe }}
+        </div>
+
+      </div>
+
+      <div class="c-data-section c-flex-row-allStart">
+        <div class="c-data-title">
+          {{ ("orderModule.auth.locDataSet" | translate)[4]['name'] }} :
+        </div>
+        <div class="c-data-data c-click-able">
+          {{ locationInfo.area | nullPipe }}
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

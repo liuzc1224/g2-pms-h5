@@ -1,0 +1,11 @@
+<div class="c-content-wrap">
+  <div class="c-title">业务参数设置</div>
+  <p class="c-flex-row-start" style="margin-top:30px;">
+    <span style="margin-right: 20px;">开启收入证明必填:</span>
+    <nz-switch [(ngModel)]="incomeStatus" [nzControl]="true" (click)="incomeStatusChange()" [nzLoading]="loading"></nz-switch>
+  </p>
+  <p class="c-flex-row-start" style="margin-top:30px;">
+    <span style="margin-right: 20px;">开启App活体认证:</span>
+    <nz-switch [(ngModel)]="faceCompareButtonStatus" [nzControl]="true" (click)="faceStatusChange()" [nzLoading]="faceLoading"></nz-switch>
+  </p>
+</div>
